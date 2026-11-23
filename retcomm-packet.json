@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "jet-moto-3-psx",
+  "name": "Jet Moto 3",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "jet-moto-3-recomp",
+  "rom_identity": {
+    "crc32": [
+      "9dc795bb"
+    ],
+    "md5": [
+      "66452e812a04154f48e5328167f5691d"
+    ],
+    "sha1": [
+      "4e4cf0f4ddece08621d7230ac1dd0ed5601948bb"
+    ],
+    "disc_serials": [
+      "SCUS-94555"
+    ],
+    "sizes": [
+      637474320
+    ],
+    "filenames": [
+      "Jet Moto 3 (USA).cue",
+      "Jet Moto 3 (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "35532351c6fc1b979c610015822b296b7f843c856dc4e54769225428adc0f184"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/jet-moto-3-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "jet-moto-3-*-windows-x64.zip",
+      "linux-x64": "jet-moto-3-*-linux-x64.zip",
+      "macos-arm64": "jet-moto-3-*-macos-arm64.zip",
+      "macos-x64": "jet-moto-3-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "jet_moto_3.exe",
+    "linux": "jet_moto_3",
+    "macos": "jet_moto_3"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/jet-moto-3-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
